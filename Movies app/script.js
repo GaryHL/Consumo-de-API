@@ -33,8 +33,17 @@ const cargarPelis = async()=>{
 				peliculas += `
 					<div class="pelicula">
 						<img class="poster" src="https://image.tmdb.org/t/p/w200/${pelicula.poster_path}">
-						<h3 class="titulo">${pelicula.title}</h3>
-                        <div class="overview_container">
+                            <h3 class="titulo">${pelicula.title}</h3>`
+                            if(pelicula.vote_average>7.4){
+                            peliculas+=   `<div class="cualification verde">${pelicula.vote_average}</div>`
+                            }
+                            else if(pelicula.vote_average>6.7){
+                                peliculas+=   `<div class="cualification amarillo">${pelicula.vote_average}</div>`
+                                }
+                            else{
+                            peliculas+=   `<div class="cualification rojo">${pelicula.vote_average}</div>`
+                            }
+                    peliculas+=   `<div class="overview_container">
                             <h2 class="overview_title">Overview</h2>
                             <h3 class="overview">${pelicula.overview}</h3>
                         </div>
@@ -42,13 +51,10 @@ const cargarPelis = async()=>{
 				`;
 			});
 			document.getElementById('container_pelis').innerHTML = peliculas;
-
     }
-
     }
     catch(error){
         console.log(error)
-
     }
 }
 cargarPelis()

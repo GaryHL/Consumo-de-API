@@ -1,82 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;700;800&display=swap');
 
 *{
-    margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body{
-    background-color: #20213F;
-    font-family: 'Poppins', sans-serif;
+background-color: #20213F;
+font-family: 'Poppins', sans-serif;
 }
 .navvar{
-    background-color:#30365f;
-    width:100%;
-    height:5rem;
-    color:white;
-    display:flex;
+background-color:#30365f;
+width:100%;
+height:5rem;
+color:white;
+display:flex;
+align-items:center;
+justify-content: space-between;
+}
 
-    align-items:center;
-    justify-content: space-between;
+.sreach{
 
 }
 /* Estilos del contenedor de las peliculas */
 #container_pelis{
-    display:flex;
-    flex-wrap:wrap;
+display:flex;
+flex-wrap:wrap;
 }
 .pelicula{
-    background-color:#2A2F53;
-    width:12.5rem;
-    margin:2rem;
-    border-radius:2px;
-    box-shadow: 1px 1px 4px black;
-    max-height:24rem;
+background-color:#2A2F53;
+width:12.5rem;
+margin:2rem;
+border-radius:2px;
+box-shadow: 1px 1px 4px black;
+height:25rem;
 }
 .titulo{
-    color:white;
-    font-size: 0.9rem;
-    font-weight: 400;
-    opacity:0.8;
-    height:4rem;
-    margin-left:0.5rem;
+color:white;
+font-size: 0.9rem;
+font-weight: 400;
+opacity:0.8;
+height:4rem;
+margin-left:0.6rem;
+padding-right:4rem;
+padding-top:0.3rem;
 }
 
 .pelicula:hover .overview_container{
-    opacity:0.9;
-    transition:0.5s;
+opacity:0.9;
+transition:0.5s;
 
+}
+
+.cualification{
+padding:0.5rem;
+position:absolute;
+margin-top:-3.5rem;
+margin-left:9.5rem;
+font-family: 'Poppins', sans-serif;
+font-weight:900 ;
+font-size:0.8rem;
+background-color:#20213F;
+opacity:0.9;
+border-radius:0.5rem;
+}
+.verde{
+color: rgb(48, 204, 48);
+}
+.rojo{
+color: tomato;
+}
+.amarillo{
+color:rgb(201, 201, 56);
 }
 
 /* estilos del contenedor overview que utilizaremos como hover */
 .overview_container{
-    background-color:white;
-    opacity:0.5;
-    color:black;
-    max-height:41rem;
-    position:absolute;
-    height:15rem;
-    margin-top:-15rem;
-    width:12.5rem;
-    opacity:0;
-    transition:0.5s; 
-    border-radius:2px;
+background-color:white;
+opacity:0.5;
+color:black;
+max-height:41rem;
+position:absolute;
+height:15rem;
+margin-top:-13.5rem;
+width:12.5rem;
+opacity:0;
+transition:0.5s; 
+border-radius:2px;
 }
 .poster{
-    height:19rem;
-    width:100%;
+height:19rem;
+width:100%;
 }
 .overview_title{
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 0.5rem 0.5rem 0.2rem 1rem;
+font-size: 1rem;
+font-weight: 700;
+padding: 0.5rem 0.5rem 0.2rem 1rem;
 }
 .overview{
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin:1rem 0rem 0rem 1rem;
-    opacity:0.8;
-    overflow-y: scroll;
-    max-height:11rem;   
+font-size: 0.9rem;
+font-weight: 500;
+margin:1rem 0rem 0.5rem 1rem;
+opacity:0.8;
+overflow-y: scroll;
+max-height:11rem;
+padding-right:0.5rem;   
 } 
+.overview::-webkit-scrollbar{
+width:0.5rem;
+background-color:#efefef;
+}
